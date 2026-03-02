@@ -145,8 +145,8 @@ const SERVICE = {
 const FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
 const s = {
-  page: { maxWidth: 1080, margin: "0 auto", padding: "0 24px 60px", fontFamily: FONT, color: "#1F2937", lineHeight: 1.6 },
-  h1: { fontSize: 36, fontWeight: 800, color: "#111827", margin: "0 0 4px", letterSpacing: "-0.02em" },
+  page: { maxWidth: 1080, margin: "0 auto", padding: "0 16px 60px", fontFamily: FONT, color: "#1F2937", lineHeight: 1.6, boxSizing: "border-box" },
+  h1: { fontSize: "clamp(24px, 6vw, 36px)", fontWeight: 800, color: "#111827", margin: "0 0 4px", letterSpacing: "-0.02em" },
   h2: { fontSize: 26, fontWeight: 700, color: "#111827", margin: "40px 0 16px", paddingBottom: 8, borderBottom: "2px solid #E5E7EB" },
   h3: { fontSize: 20, fontWeight: 700, color: "#374151", margin: "24px 0 12px" },
   p: { fontSize: 16, color: "#4B5563", margin: "0 0 12px", lineHeight: 1.7 },
@@ -175,8 +175,8 @@ function Nav({ page, setPage }) {
 
   return (
     <nav style={{ borderBottom: "1px solid #E5E7EB", marginBottom: 32, position: "sticky", top: 0, background: "white", zIndex: 100, fontFamily: FONT }}>
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", height: 56, gap: 4 }}>
-        <span onClick={() => setPage("home")} style={{ fontWeight: 800, fontSize: 18, color: "#111827", cursor: "pointer", marginRight: 32 }}>Jeongwon Jo</span>
+      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", minHeight: 56, gap: 4, flexWrap: "wrap", boxSizing: "border-box" }}>
+        <span onClick={() => setPage("home")} style={{ fontWeight: 800, fontSize: 18, color: "#111827", cursor: "pointer", marginRight: "auto" }}>Jeongwon Jo</span>
         {items.map((item) =>
           item.dropdown ? (
             <div key={item.id} style={{ position: "relative" }}
@@ -254,8 +254,8 @@ function HomePage({ setPage }) {
           src={profileImg}
           alt="Jeongwon Jo"
           style={{
-            width: 180,
-            height: 180,
+            width: 160,
+            height: 160,
             borderRadius: "50%",
             objectFit: "cover",
             flexShrink: 0,
@@ -263,7 +263,7 @@ function HomePage({ setPage }) {
             boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
           }}
         />
-        <div style={{ flex: 1, minWidth: 280 }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
           <h1 style={s.h1}>Hi! I am Jeongwon Jo</h1>
           <p style={{ ...s.p, marginTop: 16 }} dangerouslySetInnerHTML={{ __html: PROFILE.bio }} />
           <p style={{ ...s.p }} dangerouslySetInnerHTML={{ __html: PROFILE.researchIntro }} />
@@ -296,9 +296,9 @@ function HomePage({ setPage }) {
       <h2 style={s.h2}>Latest News</h2>
       <div>
         {NEWS.map((n, i) => (
-          <div key={i} style={{ display: "flex", gap: 16, marginBottom: 16, alignItems: "flex-start" }}>
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", minWidth: 120, flexShrink: 0, paddingTop: 2 }}>{n.date}</span>
-            <span style={{ fontSize: 14, color: "#4B5563", lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: n.text }} />
+          <div key={i} style={{ display: "flex", gap: 12, marginBottom: 16, alignItems: "flex-start", flexWrap: "wrap" }}>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", flexShrink: 0, paddingTop: 2 }}>{n.date}</span>
+            <span style={{ fontSize: 14, color: "#4B5563", lineHeight: 1.6, flex: 1, minWidth: 0 }} dangerouslySetInnerHTML={{ __html: n.text }} />
           </div>
         ))}
       </div>
@@ -313,7 +313,7 @@ function ResearchOverviewPage({ setPage }) {
       <p style={{ ...s.p, marginTop: 12, marginBottom: 32 }}>
         My research investigates how technology can be designed to be equitable, trustworthy, and human-centered when it mediates access to essential support for vulnerable populations.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340, 1fr))", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
         {CLUSTERS.map((c) => (
           <div key={c.id} onClick={() => setPage("research-" + c.id)}
             style={{ ...s.card, borderLeft: `4px solid ${c.color}`, padding: 24 }}>
