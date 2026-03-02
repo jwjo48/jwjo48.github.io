@@ -145,7 +145,7 @@ const SERVICE = {
 const FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
 const s = {
-  page: { maxWidth: 1080, margin: "0 auto", padding: "0 16px 60px", fontFamily: FONT, color: "#1F2937", lineHeight: 1.6, boxSizing: "border-box" },
+  page: { maxWidth: 1080, margin: "0 auto", padding: "0 16px 60px", fontFamily: FONT, color: "#1F2937", lineHeight: 1.6, boxSizing: "border-box", width: "100%", overflowX: "hidden" },
   h1: { fontSize: "clamp(24px, 6vw, 36px)", fontWeight: 800, color: "#111827", margin: "0 0 4px", letterSpacing: "-0.02em" },
   h2: { fontSize: 26, fontWeight: 700, color: "#111827", margin: "40px 0 16px", paddingBottom: 8, borderBottom: "2px solid #E5E7EB" },
   h3: { fontSize: 20, fontWeight: 700, color: "#374151", margin: "24px 0 12px" },
@@ -174,16 +174,16 @@ function Nav({ page, setPage }) {
   ];
 
   return (
-    <nav style={{ borderBottom: "1px solid #E5E7EB", marginBottom: 32, position: "sticky", top: 0, background: "white", zIndex: 100, fontFamily: FONT }}>
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", minHeight: 56, gap: 4, flexWrap: "wrap", boxSizing: "border-box" }}>
-        <span onClick={() => setPage("home")} style={{ fontWeight: 800, fontSize: 18, color: "#111827", cursor: "pointer", marginRight: "auto" }}>Jeongwon Jo</span>
+    <nav style={{ borderBottom: "1px solid #E5E7EB", marginBottom: 32, position: "sticky", top: 0, background: "white", zIndex: 100, fontFamily: FONT, width: "100%", boxSizing: "border-box" }}>
+      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", height: 56, gap: 4, boxSizing: "border-box", overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+        <span onClick={() => setPage("home")} style={{ fontWeight: 800, fontSize: 18, color: "#111827", cursor: "pointer", marginRight: "auto", flexShrink: 0, whiteSpace: "nowrap" }}>Jeongwon Jo</span>
         {items.map((item) =>
           item.dropdown ? (
             <div key={item.id} style={{ position: "relative" }}
               onMouseEnter={() => setResearchOpen(true)}
               onMouseLeave={() => setResearchOpen(false)}>
               <button onClick={() => { setPage("research"); setResearchOpen(false); }}
-                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page.startsWith("research") ? 700 : 500, color: page.startsWith("research") ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT }}>
+                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page.startsWith("research") ? 700 : 500, color: page.startsWith("research") ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT, whiteSpace: "nowrap" }}>
                 Research ▾
               </button>
               {researchOpen && (
@@ -203,7 +203,7 @@ function Nav({ page, setPage }) {
             </div>
           ) : (
             <button key={item.id} onClick={() => setPage(item.id)}
-              style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page === item.id ? 700 : 500, color: page === item.id ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT }}>
+              style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page === item.id ? 700 : 500, color: page === item.id ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT, whiteSpace: "nowrap", flexShrink: 0 }}>
               {item.label}
             </button>
           )
@@ -254,8 +254,8 @@ function HomePage({ setPage }) {
           src={profileImg}
           alt="Jeongwon Jo"
           style={{
-            width: 160,
-            height: 160,
+            width: "clamp(120px, 30vw, 160px)",
+            height: "clamp(120px, 30vw, 160px)",
             borderRadius: "50%",
             objectFit: "cover",
             flexShrink: 0,
@@ -463,7 +463,7 @@ export default function JeongwonJoPortfolio() {
   else content = <HomePage setPage={setPage} />;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#FAFAFA" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA", overflowX: "hidden", width: "100%" }}>
       <Nav page={page} setPage={setPage} />
       {content}
       <footer style={{ textAlign: "center", padding: "24px 0 40px", borderTop: "1px solid #E5E7EB", marginTop: 40 }}>
