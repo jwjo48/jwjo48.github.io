@@ -27,6 +27,7 @@ const PROFILE = {
 };
 
 const NEWS = [
+  { date: "March 2026", text: "My first-author full paper was accepted at <b>ACM CSCW 2026</b>!" },
   { date: "January 2026", text: "My two first-author full papers were accepted at <b>ACM CHI 2026</b>!" },
   { date: "September 2025", text: "Serving as an <b>AC for ACM CHI'26</b> full papers. Serving as a <b>Session Chair</b> for \"Identifying and Mitigating AI Risks\" at <b>ACM CSCW'25</b>." },
   { date: "Summer 2025", text: "Submitted grant proposals to <b>Google Academic Research Awards</b> and <b>The IBM Center for The Business of Government</b>. Serving as a <b>PC for ACM CSCW'26</b>." },
@@ -96,21 +97,22 @@ const CLUSTERS = [
 ];
 
 const PUBLICATIONS = [
+  { cite: "Jo, J., Angst, C., Anuyah, O., Badillo-Urquiola, K., & Metoyer, R. (2026). A Systematic Review of Knowledge Management in Community-based Social Service Organizations. Proceedings of the ACM on Human-Computer Interaction, CSCW.", venue: "CSCW'26", hasLink: false, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/15B5sSRSjz3AgYfcbg46kBCKsdypIiZBQ/view?usp=sharing" },
   { cite: "Szymanski A.*, Jo, J.*, Sawwan M., Eicher-Miller H., Conrado A.M., Wood, D., Dillahunt, T., & Metoyer, R. (2026, In Press). Balancing Goals, Health, and Cost: A Food Information System for Managing Complex Choices and Fostering Sustained Food Agency. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems.", venue: "CHI'26", note: "*first co-authors", hasLink: false, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1sd8ENdJ9hDeqBDfWhgYnCrolyKzALpxM/view?usp=drive_link" },
   { cite: "Carroll J.M.*, Jo, J.*, Kim, J., Lin, Y., & Chen, E. (2026, In Press). What Happened to Scenario-Based Design in HCI?: A Scoping Review. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems.", venue: "CHI'26", note: "*first co-authors", hasLink: false, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1P0Tdqk4TmhadkD0wwUWF9fd3rkoMmPd3/view?usp=drive_link" },
-  { cite: "Jo, J., Zhang, H., Cai, J, Goyal, N. (2025). AI Trust Reshaping Administrative Burdens: Understanding Trust-Burden Dynamics in LLM-Assisted Benefits Systems. In Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency.", venue: "FAccT'25", hasLink: true, hasPdf: true },
-  { cite: "Jo, J., Xie, J., & Carroll, J. M. (2025). Psychological Barriers and Facilitators in the Sharing Economy: Exploring Recognition, Visibility, Social Costs, Community Belonging, and Efficacies. Proceedings of the ACM on Human-Computer Interaction, CSCW.", venue: "CSCW'25", hasLink: true, hasPdf: true },
-  { cite: "Jo, J., Xie, J., & Carroll, J. M. (2024, May). Understanding and Balancing Trade-offs of Visibility in Support Requests. In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (pp. 1-8).", venue: "CHI EA'24", hasLink: true, hasPdf: true },
-  { cite: "Jo, J., Xie, J., Aiyer, P., Knearem, T., & Carroll, J. M. (2024). Infrastructuring Community Fridges for Food Commoning. Proceedings of the ACM on Human-Computer Interaction, 8(CSCW1), 1-27.", venue: "CSCW'24", hasLink: true, hasPdf: true },
+  { cite: "Jo, J., Zhang, H., Cai, J, Goyal, N. (2025). AI Trust Reshaping Administrative Burdens: Understanding Trust-Burden Dynamics in LLM-Assisted Benefits Systems. In Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency.", venue: "FAccT'25", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1joIRF6ge5sIX6AN_WjFMCSO8NQtBmNdL/view?usp=sharing" },
+  { cite: "Jo, J., Xie, J., & Carroll, J. M. (2025). Psychological Barriers and Facilitators in the Sharing Economy: Exploring Recognition, Visibility, Social Costs, Community Belonging, and Efficacies. Proceedings of the ACM on Human-Computer Interaction, CSCW.", venue: "CSCW'25", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1KI3MJc0heaac9RPfLyfH-32ZPkvGYztE/view?usp=sharing" },
+  { cite: "Jo, J., Xie, J., & Carroll, J. M. (2024, May). Understanding and Balancing Trade-offs of Visibility in Support Requests. In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (pp. 1-8).", venue: "CHI EA'24", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1-qL995jmYQ93lP6JJL9NQmPt0BtzC6R1/view?usp=sharing" },
+  { cite: "Jo, J., Xie, J., Aiyer, P., Knearem, T., & Carroll, J. M. (2024). Infrastructuring Community Fridges for Food Commoning. Proceedings of the ACM on Human-Computer Interaction, 8(CSCW1), 1-27.", venue: "CSCW'24", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1Yxc6yE_DwdZREe-4O6gKghdyZ_TkXxg0/view?usp=sharing" },
   { cite: "Knearem, T., Jo, J., Alliyu, O., & Carroll, J. M. (2024). Solidarity not charity! empowering local communities for disaster relief during covid-19 through grassroots support. Computer Supported Cooperative Work (CSCW), 1-46.", venue: "J of CSCW'24", hasLink: true, hasPdf: false },
-  { cite: "Jo, J., Xie, J., & Carroll, J. M. (2023, September). Food with Dignity: Public Values in the Supplemental Nutrition Assistance Program Mobile Applications. Proceedings of the 2023 ACM Conference on Information Technology for Social Good (pp. 246-256).", venue: "GoodIT'23", hasLink: true, hasPdf: true },
-  { cite: "Jo, J., Knearem, T., & Carroll, J. M. (2023). Coproducing Support Together: Sustainable and Reciprocal Civic Disaster Relief during COVID-19. Proceedings of the ACM on Human-Computer Interaction, 7(CSCW1), 1-25.", venue: "CSCW'23", hasLink: true, hasPdf: true },
-  { cite: "Jo, J., Knearem, T., Tsai, C. H., & Carroll, J. M. (2022, February). Using Local Community to Ease Long Haul Uncertainty During the COVID-19 Pandemic. In Information for a Better World: 17th International Conference, iConference 2022, Proceedings, Part II (pp. 211-227). Springer.", venue: "iConference'22", hasLink: true, hasPdf: true },
-  { cite: "Knearem, T., Jo, J., Tsai, C. H., & Carroll, J. M. (2022). Making community beliefs and capacities visible through care-mongering during covid-19. Proceedings of the ACM on Human-Computer Interaction, 6(GROUP), 1-19.", venue: "GROUP'22", hasLink: true, hasPdf: true },
-  { cite: "Knearem, T., Jo, J., & Carroll, J. M. (2021, October). Local community support for tangible food aid during covid-19. In Companion publication of the 2021 conference on computer supported cooperative work and social computing (pp. 104-107).", venue: "CSCW'21", hasLink: true, hasPdf: true },
-  { cite: "Jo, J., Knearem, T., Tsai, C. H., & Carroll, J. M. (2021, June). Covid-19 kindness: Patterns of neighborly cooperation during a global pandemic. In C&T'21: Proceedings of the 10th International Conference on Communities & Technologies (pp. 1-14).", venue: "C&T'21", award: "Best Paper Award", hasLink: true, hasPdf: true },
+  { cite: "Jo, J., Xie, J., & Carroll, J. M. (2023, September). Food with Dignity: Public Values in the Supplemental Nutrition Assistance Program Mobile Applications. Proceedings of the 2023 ACM Conference on Information Technology for Social Good (pp. 246-256).", venue: "GoodIT'23", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/13UYb6GjvYz-mHkfZrchiTm0FvtUhmBTv/view?usp=sharing" },
+  { cite: "Jo, J., Knearem, T., & Carroll, J. M. (2023). Coproducing Support Together: Sustainable and Reciprocal Civic Disaster Relief during COVID-19. Proceedings of the ACM on Human-Computer Interaction, 7(CSCW1), 1-25.", venue: "CSCW'23", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/15m6DkZD5PUYiNZ9ZLbnpguQzGoM0kKl5/view?usp=sharing" },
+  { cite: "Jo, J., Knearem, T., Tsai, C. H., & Carroll, J. M. (2022, February). Using Local Community to Ease Long Haul Uncertainty During the COVID-19 Pandemic. In Information for a Better World: 17th International Conference, iConference 2022, Proceedings, Part II (pp. 211-227). Springer.", venue: "iConference'22", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1HXDeBsPPzg39yWGi4G35q1SjylDGewgY/view?usp=sharing" },
+  { cite: "Knearem, T., Jo, J., Tsai, C. H., & Carroll, J. M. (2022). Making community beliefs and capacities visible through care-mongering during covid-19. Proceedings of the ACM on Human-Computer Interaction, 6(GROUP), 1-19.", venue: "GROUP'22", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1FOkBaJO88GK2bWWXYmb8ubWa09S2dsQl/view?usp=sharing" },
+  { cite: "Knearem, T., Jo, J., & Carroll, J. M. (2021, October). Local community support for tangible food aid during covid-19. In Companion publication of the 2021 conference on computer supported cooperative work and social computing (pp. 104-107).", venue: "CSCW'21", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1GEglt4DpJ4q9Ml4UTc9NfGTNbahWXRzy/view?usp=sharing" },
+  { cite: "Jo, J., Knearem, T., Tsai, C. H., & Carroll, J. M. (2021, June). Covid-19 kindness: Patterns of neighborly cooperation during a global pandemic. In C&T'21: Proceedings of the 10th International Conference on Communities & Technologies (pp. 1-14).", venue: "C&T'21", award: "Best Paper Award", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1Ie8H77qCOnmRLXpudcbv6OTpwEDPi9lm/view?usp=sharing" },
 
-  { cite: "Knearem, T., Jo, J., Tsai, C. H., & Carroll, J. M. (2021, June). Making space for support: an exploratory analysis of pandemic-response mutual aid platforms. In C&T'21: Proceedings of the 10th International Conference on Communities & Technologies (pp. 38-43).", venue: "C&T'21", hasLink: true, hasPdf: true },
+  { cite: "Knearem, T., Jo, J., Tsai, C. H., & Carroll, J. M. (2021, June). Making space for support: an exploratory analysis of pandemic-response mutual aid platforms. In C&T'21: Proceedings of the 10th International Conference on Communities & Technologies (pp. 38-43).", venue: "C&T'21", hasLink: true, hasPdf: true, pdfUrl: "https://drive.google.com/file/d/1uncg_XBNFd2xvfFL4mkCuH25tDQ0kaiP/view?usp=sharing" },
   { cite: "Lee, K., Jo, J., Kim, J., & Kang, Y. (2019). Can chatbots help reduce the workload of administrative officers?-Implementing and deploying FAQ chatbot service in a university. In HCI International 2019-Posters (pp. 348-354). Springer.", venue: "HCII'19", hasLink: false, hasPdf: false },
 ];
 
@@ -145,8 +147,8 @@ const SERVICE = {
 const FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
 const s = {
-  page: { maxWidth: 1080, margin: "0 auto", padding: "0 16px 60px", fontFamily: FONT, color: "#1F2937", lineHeight: 1.6, boxSizing: "border-box", width: "100%", overflowX: "hidden" },
-  h1: { fontSize: "clamp(24px, 6vw, 36px)", fontWeight: 800, color: "#111827", margin: "0 0 4px", letterSpacing: "-0.02em" },
+  page: { maxWidth: 1080, margin: "0 auto", padding: "0 24px 60px", fontFamily: FONT, color: "#1F2937", lineHeight: 1.6 },
+  h1: { fontSize: 36, fontWeight: 800, color: "#111827", margin: "0 0 4px", letterSpacing: "-0.02em" },
   h2: { fontSize: 26, fontWeight: 700, color: "#111827", margin: "40px 0 16px", paddingBottom: 8, borderBottom: "2px solid #E5E7EB" },
   h3: { fontSize: 20, fontWeight: 700, color: "#374151", margin: "24px 0 12px" },
   p: { fontSize: 16, color: "#4B5563", margin: "0 0 12px", lineHeight: 1.7 },
@@ -174,16 +176,16 @@ function Nav({ page, setPage }) {
   ];
 
   return (
-    <nav style={{ borderBottom: "1px solid #E5E7EB", marginBottom: 32, position: "sticky", top: 0, background: "white", zIndex: 100, fontFamily: FONT, width: "100%", boxSizing: "border-box" }}>
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", height: 56, gap: 4, boxSizing: "border-box", overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
-        <span onClick={() => setPage("home")} style={{ fontWeight: 800, fontSize: 18, color: "#111827", cursor: "pointer", marginRight: "auto", flexShrink: 0, whiteSpace: "nowrap" }}>Jeongwon Jo</span>
+    <nav style={{ borderBottom: "1px solid #E5E7EB", marginBottom: 32, position: "sticky", top: 0, background: "white", zIndex: 100, fontFamily: FONT }}>
+      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", height: 56, gap: 4 }}>
+        <span onClick={() => setPage("home")} style={{ fontWeight: 800, fontSize: 18, color: "#111827", cursor: "pointer", marginRight: 32 }}>Jeongwon Jo</span>
         {items.map((item) =>
           item.dropdown ? (
             <div key={item.id} style={{ position: "relative" }}
               onMouseEnter={() => setResearchOpen(true)}
               onMouseLeave={() => setResearchOpen(false)}>
               <button onClick={() => { setPage("research"); setResearchOpen(false); }}
-                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page.startsWith("research") ? 700 : 500, color: page.startsWith("research") ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT, whiteSpace: "nowrap" }}>
+                style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page.startsWith("research") ? 700 : 500, color: page.startsWith("research") ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT }}>
                 Research ▾
               </button>
               {researchOpen && (
@@ -203,7 +205,7 @@ function Nav({ page, setPage }) {
             </div>
           ) : (
             <button key={item.id} onClick={() => setPage(item.id)}
-              style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page === item.id ? 700 : 500, color: page === item.id ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT, whiteSpace: "nowrap", flexShrink: 0 }}>
+              style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14, fontWeight: page === item.id ? 700 : 500, color: page === item.id ? "#2563EB" : "#4B5563", padding: "8px 12px", fontFamily: FONT }}>
               {item.label}
             </button>
           )
@@ -254,8 +256,8 @@ function HomePage({ setPage }) {
           src={profileImg}
           alt="Jeongwon Jo"
           style={{
-            width: "clamp(120px, 30vw, 160px)",
-            height: "clamp(120px, 30vw, 160px)",
+            width: 180,
+            height: 180,
             borderRadius: "50%",
             objectFit: "cover",
             flexShrink: 0,
@@ -263,7 +265,7 @@ function HomePage({ setPage }) {
             boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
           }}
         />
-        <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ flex: 1, minWidth: 280 }}>
           <h1 style={s.h1}>Hi! I am Jeongwon Jo</h1>
           <p style={{ ...s.p, marginTop: 16 }} dangerouslySetInnerHTML={{ __html: PROFILE.bio }} />
           <p style={{ ...s.p }} dangerouslySetInnerHTML={{ __html: PROFILE.researchIntro }} />
@@ -296,9 +298,9 @@ function HomePage({ setPage }) {
       <h2 style={s.h2}>Latest News</h2>
       <div>
         {NEWS.map((n, i) => (
-          <div key={i} style={{ display: "flex", gap: 12, marginBottom: 16, alignItems: "flex-start", flexWrap: "wrap" }}>
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", flexShrink: 0, paddingTop: 2 }}>{n.date}</span>
-            <span style={{ fontSize: 14, color: "#4B5563", lineHeight: 1.6, flex: 1, minWidth: 0 }} dangerouslySetInnerHTML={{ __html: n.text }} />
+          <div key={i} style={{ display: "flex", gap: 16, marginBottom: 16, alignItems: "flex-start" }}>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", minWidth: 120, flexShrink: 0, paddingTop: 2 }}>{n.date}</span>
+            <span style={{ fontSize: 14, color: "#4B5563", lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: n.text }} />
           </div>
         ))}
       </div>
@@ -313,7 +315,7 @@ function ResearchOverviewPage({ setPage }) {
       <p style={{ ...s.p, marginTop: 12, marginBottom: 32 }}>
         My research investigates how technology can be designed to be equitable, trustworthy, and human-centered when it mediates access to essential support for vulnerable populations.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340, 1fr))", gap: 16 }}>
         {CLUSTERS.map((c) => (
           <div key={c.id} onClick={() => setPage("research-" + c.id)}
             style={{ ...s.card, borderLeft: `4px solid ${c.color}`, padding: 24 }}>
@@ -352,7 +354,7 @@ function PublicationsPage() {
     <div style={s.page}>
       <h1 style={s.h1}>Publications</h1>
       <p style={{ ...s.p, marginTop: 8, marginBottom: 32 }}>
-        17 peer-reviewed publications at top HCI and responsible AI venues (CHI, CSCW, FAccT, C&T, GoodIT).
+        18 peer-reviewed publications at top HCI and responsible AI venues (CHI, CSCW, FAccT, C&T, GoodIT).
       </p>
       <div>
         {PUBLICATIONS.map((pub, i) => (
@@ -445,10 +447,25 @@ function ServicePage() {
 
 // ─── Main App ────────────────────────────────────────────────────────────────
 
+function getPageFromHash() {
+  const hash = window.location.hash.replace("#", "");
+  return hash || "home";
+}
+
 export default function JeongwonJoPortfolio() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(getPageFromHash);
 
   useEffect(() => {
+    const onHashChange = () => setPage(getPageFromHash());
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  useEffect(() => {
+    const currentHash = window.location.hash.replace("#", "") || "home";
+    if (currentHash !== page) {
+      window.location.hash = page === "home" ? "" : page;
+    }
     window.scrollTo(0, 0);
   }, [page]);
 
@@ -463,7 +480,7 @@ export default function JeongwonJoPortfolio() {
   else content = <HomePage setPage={setPage} />;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#FAFAFA", overflowX: "hidden", width: "100%" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA" }}>
       <Nav page={page} setPage={setPage} />
       {content}
       <footer style={{ textAlign: "center", padding: "24px 0 40px", borderTop: "1px solid #E5E7EB", marginTop: 40 }}>
